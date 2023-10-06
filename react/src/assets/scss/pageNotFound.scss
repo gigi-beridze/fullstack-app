@@ -1,0 +1,25 @@
+.pageNotFound {
+    display: flex;
+    height:94vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img {
+        width: 400px;
+    }
+    h2 {
+        line-height: 0px;
+        color: var(--brownColor);
+    }
+    p {
+        line-height: 40px;
+        text-decoration: none;
+        font-size: 16px;
+        a{
+            color: #A32CC4;
+            transition: .4s ease-in-out;
+        }:hover {
+            color: #710193;
+        }
+    }
+}

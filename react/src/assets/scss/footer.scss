@@ -1,0 +1,25 @@
+.footer {
+    border-top: 1px solid var(--brownColor);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 5vh;
+    .container {
+        width: 100%;
+    }
+    .footer-items {
+        display: flex;
+        justify-content: space-between;
+    }
+    span{
+        font-size: 14px;
+        font-weight: bold;
+        color: var(--dark);
+        a {
+            color: #312f36;
+            transition: .4s ease-in-out;
+        }:hover {
+            color: #79624e;
+        }
+    }
+}

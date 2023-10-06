@@ -1,0 +1,69 @@
+.product-list {
+    margin: 50px 0px;
+    min-height: 76vh;
+    .item {
+
+        .item-card {
+            height: 200px;
+            min-width: 200px;
+            flex: 0 0 calc(25% - 10px); 
+            margin: 5px; 
+            border: 1px solid var(--brownColor); 
+            padding: 10px;
+            box-sizing: border-box; 
+
+            input[type="checkbox"] {
+                -webkit-appearance: none;
+                appearance: none;
+                background-color: #fff;
+                margin: 0;
+                font: inherit;
+                color: var(--dark);
+                width: 1.15em;
+                height: 1.15em;
+                border: 0.15em solid var(--dark);
+                border-radius: 0.15em;
+                transform: translateY(-0.075em);
+                display: grid;
+                place-content: center;
+            }::before {
+                content: "";
+                width: 0.65em;
+                height: 0.65em;
+                clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+                transform: scale(0);
+                transform-origin: bottom left;
+                transition: 120ms transform ease-in-out;
+                box-shadow: inset 1em 1em var(--form-control-color);
+                background-color: var(--brownColor);
+            }:checked::before {
+                transform: scale(1);
+            }:focus {
+                outline: max(2px, 0.15em) solid currentColor;
+                outline-offset: max(2px, 0.15em);
+            }:disabled {
+                --form-control-color: var(--form-control-disabled);   
+                color: var(--form-control-disabled);
+                cursor: not-allowed;
+            }
+        }
+    
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                height: 70%;
+                justify-content: center;
+                text-align: center; 
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+}
